@@ -1,0 +1,41 @@
+.navbar{
+    background: $primary-white !important;
+    padding: 0 10vw;
+    box-shadow: $primary-black 0 0 5px -1px;
+}
+.navbar-brand img{
+    width: 50px; 
+
+}
+
+ul.pagination li.page-item a.page-link{
+    background: $secondary-color;
+    color: $primary-white;
+    transition: .1s;
+    &:hover{
+        background: $secondary-h-color !important;
+    }
+}
+
+@include down(1090){
+    .navbar{
+        padding: 0;
+        text-align: center;
+        .navbar-toggler{
+            margin-right: 10vw;
+        }
+        .navbar-brand{
+            margin-left: 10vw;
+        }
+        .nav-item{
+            background: $primary-color;
+            &:nth-child(even){
+                background: $secondary-color;
+            }
+        }
+        .nav-link{
+            background: inherit;
+            color: $primary-white !important;
+        }
+    }
+}

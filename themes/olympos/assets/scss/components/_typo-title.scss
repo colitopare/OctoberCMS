@@ -1,0 +1,31 @@
+/*** Title ***/ 
+
+.primary-title{
+    @extend %abs-primary-title;
+    color: $primary-black;
+}
+
+.secondary-title{
+    @extend %abs-secondary-title;
+    color: $secondary-black;
+}
+
+.tertiary-title{
+    @extend %abs-tertiary-title;
+    color: $primary-black;
+}
+
+.quaternary-title{
+    @extend %abs-quaternary-title;
+    color: $quarternary-black;
+}
+
+.quinary-title{
+    @extend %abs-quinary-title;
+    color: $quinary-black;
+}
+
+.senary-title{
+    @extend %abs-senary-title;
+    color: $senary-black;
+}

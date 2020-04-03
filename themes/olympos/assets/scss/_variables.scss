@@ -1,0 +1,40 @@
+/*** Title ***/ 
+$primary-font: 'Roboto', sans-serif !important; 
+/*** Lab ***/ 
+$secondary-font: 'Quicksand', sans-serif !important;
+
+/*** Black ***/ 
+$primary-black: #382d25; 
+
+$secondary-black: #1c1c1c; 
+$tertiary-black: #222;
+$quarternary-black: #2c2c2c;
+$quinary-black: #333;
+$senary-black: #3c3c3c;
+
+/*** Grey ***/ 
+$primary-grey: #666; 
+$secondary-grey: #777;
+$tertiary-grey: #888;
+
+/*** White ***/ 
+$primary-white: #fff;
+$secondary-white: rgb(240, 240, 240); 
+
+/*** Color ***/ 
+$primary-color: #73b546; 
+$secondary-color: #00944f; 
+$tertiary-color: #d43035; 
+
+/*** Hover-color ***/
+$primary-h-color: darken($primary-color, 10); 
+$secondary-h-color: darken($secondary-color, 10); 
+$tertiary-h-color: darken($tertiary-color, 10); 
+
+/*** Shadow-color ***/ 
+$primary-s-color:""; 
+$secondary-s-color:""; 
+$tertiary-s-color:""; 
+
+/* Background */
+$bg-path-homepage-header: url('../../assets/medias/header-background-2.jpg') no-repeat;

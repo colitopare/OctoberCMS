@@ -1,0 +1,67 @@
+.primary-lab{
+    @extend %abs-primary-lab;
+    color: $tertiary-black;
+}
+
+.secondary-lab{
+    @extend %abs-primary-lab;
+    color: $primary-white;
+}
+
+li.list-unstyled{
+    width: 80%;
+    list-style: none !important;
+    @include down(750){
+        width: 100%;
+    }
+}
+
+div.media {
+    width: 85%;
+    display: flex;
+    padding: 5px;
+    margin-bottom: 1rem;
+    //border: $secondary-color solid 2px;
+    box-shadow: $primary-black 1px 1px 5px -1px;
+    align-items: center;
+    border-radius: 50px;
+    transition: .2s;
+    &:hover{
+        cursor: pointer;
+        box-shadow: $primary-black 0px 0px 5px -2px;
+    }
+}
+
+div.media-body .legend{
+    color: $primary-black;
+}
+
+div.media.is-active{
+    background: $secondary-color;
+    .legend{
+        color: $primary-white;
+    }
+}
+
+
+div.media img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+div.media .media-body{
+    display: flex;
+    align-items: center;
+}
+
+.text-primary{
+    color: $primary-color !important;
+}
+
+
+@include down (600){
+    div.media{
+        width: 100%;
+    }
+}

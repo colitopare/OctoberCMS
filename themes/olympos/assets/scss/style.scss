@@ -1,0 +1,91 @@
+/*** VAR ***/
+@import './variables';
+
+/*** VENDOR ***/ 
+@import 'vendor/mixins'; 
+@import 'vendor/reset'; 
+@import 'vendor/reboot'; 
+@import 'vendor/harry';
+@import 'vendor/bootstrap';
+
+@import 'vendor/grid';
+@import 'vendor/grid-framework';
+@import "vendor/breakpoints";
+@import 'vendor/animate';
+@import 'vendor/wjs';
+
+/*** LAYOUT ***/ 
+@import 'layout/header'; 
+@import 'layout/nav'; 
+@import 'layout/section'; 
+@import 'layout/article'; 
+@import 'layout/footer';
+
+/*** COMPONENTS ***/ 
+@import 'components/card'; 
+@import 'components/button'; 
+@import 'components/figure'; 
+@import 'components/form'; 
+@import 'components/table'; 
+@import 'components/img'; 
+@import 'components/typo-title'; 
+@import 'components/typo-subtitle'; 
+@import 'components/typo-lab'; 
+@import 'components/typo-link';
+@import 'components/tooltip'; 
+@import 'components/modal';  
+
+/*** TEST ***/ 
+@import 'test'; 
+
+.j-content-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start !important;
+    align-items: center;
+}
+
+.j-content-col-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    color: $primary-black;
+    &:hover{
+        color: $primary-black;
+        text-decoration: none;
+    }
+}
+
+a.btn-primary{
+    color: $primary-white !important;
+}
+
+i{
+    font-style: italic !important;
+}
+
+b{
+    font-weight: bold !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    &::first-letter{
+        text-transform: uppercase !important;
+    }
+}
+
+@include down (650) {
+
+    #btn-pagin-categ, #pagin-categ{
+        display: none;
+    }
+
+    #all-categ {
+        display: block !important;
+    }
+
+}

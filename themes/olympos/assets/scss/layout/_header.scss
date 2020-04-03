@@ -1,0 +1,69 @@
+.homepage-header{
+    width: 100%;
+    height: 45vh;
+    position: relative;
+    background: $bg-path-homepage-header;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &::after{
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 45vh; 
+        background: $primary-black;
+        top: 0;
+        opacity: .6;
+        
+        @include down (500) {
+            height: 65vh;
+        }
+    }
+}
+
+.homepage-header .header-title{
+    color: $primary-white;
+    font-size: 2rem;
+    z-index: 1;
+}
+
+.homepage-header a {
+    position: absolute;
+    top: calc(45vh - 33px);
+    right: 25%;
+    z-index: 1;
+}
+
+@include down (1450){
+    .homepage-header{
+        .header-title{
+            width: 100%;
+            font-size: 1.7rem;
+            text-align: center;
+            top: 4vh;
+            //position: relative;
+        }
+    }
+}
+
+@include down (500) {
+
+    .homepage-header {
+        height: 65vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .homepage-header a {
+        position: relative;
+        margin: 0 auto;
+        right: 0;
+        top: 0;
+        z-index: 1;
+    }
+
+}

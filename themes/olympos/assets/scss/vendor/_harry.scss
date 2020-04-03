@@ -1,0 +1,92 @@
+%abs-primary-title{
+    font-size: 3.4rem;
+    margin-bottom: 4vh;
+    @media screen and (max-width: 450px){
+        font-size: 2.8rem;
+        text-align: center;
+    }
+    @media screen and (max-width: 350px){
+        font-size: 2.5rem;
+    }
+}
+
+%abs-secondary-title{
+    font-size: 2.9rem;
+    margin-bottom: 2vh;
+    @media screen and (max-width: 450px){
+        font-size: 2.3rem;
+    }
+    @media screen and (max-width: 350px){
+        font-size: 2rem;
+    }
+}
+
+%abs-tertiary-title{
+    font-size: 2.4rem;
+    margin-bottom: 2vh;
+    @media screen and (max-width: 450px){
+        font-size: 2rem;
+    }
+    @media screen and (max-width: 350px){
+        font-size: 1.9rem;
+    }
+}
+
+%abs-quaternary-title{
+    font-size: 1.9rem;
+    margin-bottom: 2vh;
+    @media screen and (max-width: 350px){
+        font-size: 1.8rem;
+    }
+}
+
+%abs-quinary-title{
+    font-size: 1.7rem;
+    margin-bottom: 2vh;
+    @media screen and (max-width: 350px){
+        font-size: 1.6rem;
+    }
+}
+
+%abs-senary-title{
+    font-size: 1.6rem;
+    margin-bottom: 2vh;
+    @media screen and (max-width: 350px){
+        font-size: 1.5rem;
+    }
+}
+
+%abs_li_quote{
+    list-style: none; 
+    &::before{
+        content: '"';
+        padding-right: 2px;
+        font-weight: 500;
+        font-size: 1.2rem;
+    }
+    &::after{
+        content: '"';
+        padding-left: 2px;
+        font-weight: 500;
+        font-size: 1.2rem; 
+    }
+}
+
+%abs-primary-lab{
+    font-size: 1.3rem; 
+    margin-bottom: 1.5vh;
+    line-height: 1.5rem;
+    &::first-letter{
+        font-size: 1.4rem; 
+    }
+    @media screen and (max-width: 800px){
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        &::first-letter{
+            font-size: 1.5rem; 
+        }
+    }
+    @media screen and (max-width: 450px){
+        line-height: 2rem;
+    }
+}

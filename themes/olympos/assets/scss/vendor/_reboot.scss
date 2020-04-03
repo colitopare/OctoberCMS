@@ -1,0 +1,33 @@
+*{box-sizing: border-box}; 
+
+h1, h2, h3, h4, h5, h5 {
+    font-family: $primary-font; 
+}
+
+p, a, ul, li, span, strong, em, 
+input, textarea, figcaption,
+table, thead, th, tbody, tr, td,
+form, input, label, button {
+    font-family: $secondary-font;
+}
+
+a{
+    text-decoration: none; 
+    &:hover{
+        text-decoration: none; 
+    }
+}
+
+input, button {
+    &:focus{
+        outline: none !important;
+    }
+}
+
+strong{
+    font-weight: bold; 
+}
+
+em{
+    font-style: italic;
+}

@@ -1,0 +1,39 @@
+footer{
+    width: 100%;
+    height: auto; 
+    padding: 10vh 10vw;
+    background: $primary-black;
+    color: $primary-white;
+    .icon{
+        fill: $primary-white;
+    }
+}
+
+footer .foot-nav{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 7.5rem;
+    a{
+        color: $primary-white;
+        transition: .2s;
+        &:hover{
+            color: $primary-color;
+        }
+    }
+
+}
+
+footer a {
+    color: $primary-white;
+    transition: .2s;
+    &:hover{
+        color: $primary-color;
+    }
+}
+
+@include down (633){
+    footer .foot-nav{
+        margin-top: 2rem;
+    }
+}
+
