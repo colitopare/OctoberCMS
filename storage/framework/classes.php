@@ -5,4 +5,6 @@
   'system\\Controllers\\settings' => 'modules/system/controllers/settings.php',
   'system\\Controllers\\updates' => 'modules/system/controllers/updates.php',
   'rainlab\\builder\\Plugin' => 'plugins/rainlab/builder/Plugin.php',
+  'cms\\Controllers\\index' => 'modules/cms/controllers/index.php',
+  'rainlab\\blog\\Plugin' => 'plugins/rainlab/blog/Plugin.php',
 );
