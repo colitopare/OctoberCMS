@@ -1,0 +1,16 @@
+fields:
+    name:
+        label: 'Nom du film'
+        span: full
+        required: 1
+        type: text
+    description:
+        label: Description
+        size: ''
+        span: full
+        type: richeditor
+    year:
+        label: 'Année de sortie'
+        span: auto
+        required: 1
+        type: text

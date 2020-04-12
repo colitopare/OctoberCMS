@@ -1,0 +1,9 @@
+columns:
+    name:
+        label: Nom
+        type: text
+        searchable: true
+        sortable: true
+    year:
+        label: 'Année de sortie'
+        type: number

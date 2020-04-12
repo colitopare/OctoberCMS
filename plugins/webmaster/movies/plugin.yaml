@@ -1,0 +1,11 @@
+plugin:
+    name: 'webmaster.movies::lang.plugin.name'
+    description: 'webmaster.movies::lang.plugin.description'
+    author: webmaster
+    icon: oc-icon-video-camera
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Films
+        url: webmaster/movies/movies
+        icon: icon-video-camera

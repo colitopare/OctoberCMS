@@ -1,0 +1,10 @@
+name: Movies
+form: $/webmaster/movies/models/movie/fields.yaml
+modelClass: Webmaster\Movies\Models\Movie
+defaultRedirect: webmaster/movies/movies
+create:
+    redirect: 'webmaster/movies/movies/update/:id'
+    redirectClose: webmaster/movies/movies
+update:
+    redirect: webmaster/movies/movies
+    redirectClose: webmaster/movies/movies
