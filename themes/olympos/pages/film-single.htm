@@ -1,12 +1,12 @@
 title = "Film"
-url = "/film/:id"
+url = "/films/:slug"
 layout = "default"
 is_hidden = 0
 
 [builderDetails]
 modelClass = "Webmaster\Movies\Models\Movie"
-identifierValue = "{{ :id }}"
-modelKeyColumn = "id"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
 displayColumn = "name"
 notFoundMessage = "Record not found"
 ==

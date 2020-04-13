@@ -14,3 +14,11 @@ fields:
         span: auto
         required: 1
         type: text
+    slug:
+        label: Slug
+        span: left
+        preset:
+            field: name
+            type: slug
+        hidden: 0
+        type: text

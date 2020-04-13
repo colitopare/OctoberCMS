@@ -3,3 +3,6 @@
 1.0.2:
     - 'Created table webmaster_movies_'
     - builder_table_create_webmaster_movies_.php
+1.0.3:
+    - 'Updated table webmaster_movies_'
+    - builder_table_update_webmaster_movies_.php

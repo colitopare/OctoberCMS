@@ -121,7 +121,7 @@ class __TwigTemplate_9ab5056b7b78ce942245966ce3df3aee26a465b685813124ef10f4de540
             // line 36
             if ((twig_get_attribute($this->env, $this->source, ($context["records"] ?? null), "currentPage", [], "any", false, false, false, 36) > 1)) {
                 // line 37
-                echo "            <li><a href=\"";
+                echo "            <li class=\"page-item\"><a class=\"page-link\" href=\"";
                 echo $this->extensions['Cms\Twig\Extension']->pageFilter(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 37), "baseFileName", [], "any", false, false, false, 37), [($context["pageParam"] ?? null) => (twig_get_attribute($this->env, $this->source, ($context["records"] ?? null), "currentPage", [], "any", false, false, false, 37) - 1)]);
                 echo "\">&larr; Prev</a></li>
         ";
@@ -134,10 +134,10 @@ class __TwigTemplate_9ab5056b7b78ce942245966ce3df3aee26a465b685813124ef10f4de540
             $context['_seq'] = twig_ensure_traversable(range(1, twig_get_attribute($this->env, $this->source, ($context["records"] ?? null), "lastPage", [], "any", false, false, false, 40)));
             foreach ($context['_seq'] as $context["_key"] => $context["page"]) {
                 // line 41
-                echo "            <li class=\"";
+                echo "            <li class=\"page-item ";
                 echo (((twig_get_attribute($this->env, $this->source, ($context["records"] ?? null), "currentPage", [], "any", false, false, false, 41) == $context["page"])) ? ("active") : (null));
                 echo "\">
-                <a href=\"";
+                <a class=\"page-link\" href=\"";
                 // line 42
                 echo $this->extensions['Cms\Twig\Extension']->pageFilter(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 42), "baseFileName", [], "any", false, false, false, 42), [($context["pageParam"] ?? null) => $context["page"]]);
                 echo "\">";
@@ -155,7 +155,7 @@ class __TwigTemplate_9ab5056b7b78ce942245966ce3df3aee26a465b685813124ef10f4de540
             // line 46
             if ((twig_get_attribute($this->env, $this->source, ($context["records"] ?? null), "lastPage", [], "any", false, false, false, 46) > twig_get_attribute($this->env, $this->source, ($context["records"] ?? null), "currentPage", [], "any", false, false, false, 46))) {
                 // line 47
-                echo "            <li><a href=\"";
+                echo "            <li class=\"page-item\"><a class=\"page-link\" href=\"";
                 echo $this->extensions['Cms\Twig\Extension']->pageFilter(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 47), "baseFileName", [], "any", false, false, false, 47), [($context["pageParam"] ?? null) => (twig_get_attribute($this->env, $this->source, ($context["records"] ?? null), "currentPage", [], "any", false, false, false, 47) + 1)]);
                 echo "\">Next &rarr;</a></li>
         ";
@@ -219,17 +219,17 @@ class __TwigTemplate_9ab5056b7b78ce942245966ce3df3aee26a465b685813124ef10f4de540
 {% if records.lastPage > 1 %}
     <ul class=\"pagination\">
         {% if records.currentPage > 1 %}
-            <li><a href=\"{{ this.page.baseFileName|page({ (pageParam): (records.currentPage-1) }) }}\">&larr; Prev</a></li>
+            <li class=\"page-item\"><a class=\"page-link\" href=\"{{ this.page.baseFileName|page({ (pageParam): (records.currentPage-1) }) }}\">&larr; Prev</a></li>
         {% endif %}
 
         {% for page in 1..records.lastPage %}
-            <li class=\"{{ records.currentPage == page ? 'active' : null }}\">
-                <a href=\"{{ this.page.baseFileName|page({ (pageParam): page }) }}\">{{ page }}</a>
+            <li class=\"page-item {{ records.currentPage == page ? 'active' : null }}\">
+                <a class=\"page-link\" href=\"{{ this.page.baseFileName|page({ (pageParam): page }) }}\">{{ page }}</a>
             </li>
         {% endfor %}
 
         {% if records.lastPage > records.currentPage %}
-            <li><a href=\"{{ this.page.baseFileName|page({ (pageParam): (records.currentPage+1) }) }}\">Next &rarr;</a></li>
+            <li class=\"page-item\"><a class=\"page-link\" href=\"{{ this.page.baseFileName|page({ (pageParam): (records.currentPage+1) }) }}\">Next &rarr;</a></li>
         {% endif %}
     </ul>
 {% endif %}", "/Users/Muriel/Sites/projetTestOctoberCMS/themes/olympos/pages/films.htm", "");
