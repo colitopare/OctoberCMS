@@ -1,3 +1,5 @@
 /node_modules
 /vendor
+/storage/cms/cache/*
 .vscode
+/storage/framework/cache/*
