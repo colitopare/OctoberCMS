@@ -1,0 +1,13 @@
+<header class="main-header">
+	<div class="container clearfix">
+		<h1 class="logo">Films avec October CMS</h1>
+		<nav class="main-nav">
+			<ul>
+				<li class="{% if this.page.id == 'home' %} active {% endif %}"><a href="{{'home'|page}}">Accueil</a></li>
+				<li class="{% if this.page.id == 'films' %} active {% endif %}"><a href="{{'films'|page}}">Films</a></li>
+
+			</ul>
+		</nav>
+
+	</div>
+</header>
