@@ -57,51 +57,53 @@ class __TwigTemplate_e47801fd8c9fbcd1872746df5c8fbfec1155d1f18540da442b5c17ae26a
         // line 11
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/october.png");
         echo "\">
+
         <link href=\"";
-        // line 12
+        // line 13
         echo $this->extensions['Cms\Twig\Extension']->themeFilter([0 => "assets/css/style.css"]);
-        // line 14
+        // line 15
         echo "\" rel=\"stylesheet\">
         ";
-        // line 15
+        // line 16
         echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('css');
         echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('styles');
-        // line 16
+        // line 17
         echo "    </head>
     <body>
 
         <!-- Header -->
 ";
-        // line 20
+        // line 21
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("header"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 21
+        // line 22
         echo "
         <!-- Content -->
         <section id=\"layout-content\" class=\"container lcearfix\">
             ";
-        // line 24
-        echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
         // line 25
+        echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
+        // line 26
         echo "        </section>
 
         <!-- Footer -->
 ";
-        // line 28
+        // line 29
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("footer"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 29
+        // line 30
         echo "
         <!-- Scripts -->
+
         <script src=\"";
-        // line 31
+        // line 33
         echo $this->extensions['Cms\Twig\Extension']->themeFilter([0 => "assets/js/jquery.js", 1 => "assets/js/app.js"]);
-        // line 34
+        // line 36
         echo "\"></script>
         ";
-        // line 35
+        // line 37
         $_minify = System\Classes\CombineAssets::instance()->useMinify;
         if ($_minify) {
             echo '<script src="' . Request::getBasePath() . '/modules/system/assets/js/framework.combined-min.js"></script>'.PHP_EOL;
@@ -112,11 +114,11 @@ class __TwigTemplate_e47801fd8c9fbcd1872746df5c8fbfec1155d1f18540da442b5c17ae26a
         }
         echo '<link rel="stylesheet" property="stylesheet" href="' . Request::getBasePath() .'/modules/system/assets/css/framework.extras'.($_minify ? '-min' : '').'.css">'.PHP_EOL;
         unset($_minify);
-        // line 36
+        // line 38
         echo "        ";
         echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('js');
         echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('scripts');
-        // line 37
+        // line 39
         echo "
     </body>
 </html>";
@@ -134,7 +136,7 @@ class __TwigTemplate_e47801fd8c9fbcd1872746df5c8fbfec1155d1f18540da442b5c17ae26a
 
     public function getDebugInfo()
     {
-        return array (  120 => 37,  116 => 36,  105 => 35,  102 => 34,  100 => 31,  96 => 29,  92 => 28,  87 => 25,  85 => 24,  80 => 21,  76 => 20,  70 => 16,  67 => 15,  64 => 14,  62 => 12,  58 => 11,  51 => 7,  47 => 6,  43 => 5,  37 => 1,);
+        return array (  122 => 39,  118 => 38,  107 => 37,  104 => 36,  102 => 33,  97 => 30,  93 => 29,  88 => 26,  86 => 25,  81 => 22,  77 => 21,  71 => 17,  68 => 16,  65 => 15,  63 => 13,  58 => 11,  51 => 7,  47 => 6,  43 => 5,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -150,6 +152,7 @@ class __TwigTemplate_e47801fd8c9fbcd1872746df5c8fbfec1155d1f18540da442b5c17ae26a
         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
         <meta name=\"generator\" content=\"OctoberCMS\">
         <link rel=\"icon\" type=\"image/png\" href=\"{{ 'assets/images/october.png'|theme }}\">
+
         <link href=\"{{ [
           'assets/css/style.css'
         ]|theme }}\" rel=\"stylesheet\">
@@ -169,6 +172,7 @@ class __TwigTemplate_e47801fd8c9fbcd1872746df5c8fbfec1155d1f18540da442b5c17ae26a
 {% partial \"footer\" %}
 
         <!-- Scripts -->
+
         <script src=\"{{[
           'assets/js/jquery.js',
           'assets/js/app.js'

@@ -1,26 +1,34 @@
-1586761653a:1:{s:10:"header.htm";a:5:{s:8:"fileName";s:10:"header.htm";s:7:"content";s:401:"<header class="main-header">
+1586764245a:1:{s:10:"header.htm";a:5:{s:8:"fileName";s:10:"header.htm";s:7:"content";s:803:"<header class="main-header">
 	<div class="container clearfix">
-		<h1 class="logo">Films avec October CMS</h1>
-		<nav class="main-nav">
-			<ul>
-				<li class="{% if this.page.id == 'home' %} active {% endif %}"><a href="{{'home'|page}}">Accueil</a></li>
-				<li class="{% if this.page.id == 'films' %} active {% endif %}"><a href="{{'films'|page}}">Films</a></li>
 
-			</ul>
-		</nav>
-
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="{{'home'|page}}">Films avec October CMS</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item {% if this.page.id == 'home' %} active {% endif %}"><a href="{{'home'|page}}">Accueil</a></li>
+      <li class="nav-item {% if this.page.id == 'films' %} active {% endif %}"><a href="{{'films'|page}}">Films</a></li>
+    </ul>
+  </div>
+</nav>
 	</div>
 </header>
-";s:5:"mtime";i:1586761050;s:6:"markup";s:400:"<header class="main-header">
+";s:5:"mtime";i:1586763639;s:6:"markup";s:802:"<header class="main-header">
 	<div class="container clearfix">
-		<h1 class="logo">Films avec October CMS</h1>
-		<nav class="main-nav">
-			<ul>
-				<li class="{% if this.page.id == 'home' %} active {% endif %}"><a href="{{'home'|page}}">Accueil</a></li>
-				<li class="{% if this.page.id == 'films' %} active {% endif %}"><a href="{{'films'|page}}">Films</a></li>
 
-			</ul>
-		</nav>
-
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="{{'home'|page}}">Films avec October CMS</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item {% if this.page.id == 'home' %} active {% endif %}"><a href="{{'home'|page}}">Accueil</a></li>
+      <li class="nav-item {% if this.page.id == 'films' %} active {% endif %}"><a href="{{'films'|page}}">Films</a></li>
+    </ul>
+  </div>
+</nav>
 	</div>
 </header>";s:4:"code";N;}}

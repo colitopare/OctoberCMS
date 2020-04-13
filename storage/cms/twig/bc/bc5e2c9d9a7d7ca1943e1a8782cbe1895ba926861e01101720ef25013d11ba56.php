@@ -56,49 +56,51 @@ class __TwigTemplate_9ab5056b7b78ce942245966ce3df3aee26a465b685813124ef10f4de540
         foreach ($context['_seq'] as $context["_key"] => $context["record"]) {
             // line 10
             echo "        <li>
-            ";
-            // line 12
-            echo "            ";
-            ob_start();
+            <h3>
+                ";
             // line 13
             echo "                ";
+            ob_start();
+            // line 14
+            echo "                    ";
             if (($context["detailsPage"] ?? null)) {
-                // line 14
-                echo "                    <a href=\"";
-                echo $this->extensions['Cms\Twig\Extension']->pageFilter(($context["detailsPage"] ?? null), [($context["detailsUrlParameter"] ?? null) => twig_get_attribute($this->env, $this->source, $context["record"], ($context["detailsKeyColumn"] ?? null), [], "any", false, false, false, 14)]);
+                // line 15
+                echo "                        <a href=\"";
+                echo $this->extensions['Cms\Twig\Extension']->pageFilter(($context["detailsPage"] ?? null), [($context["detailsUrlParameter"] ?? null) => twig_get_attribute($this->env, $this->source, $context["record"], ($context["detailsKeyColumn"] ?? null), [], "any", false, false, false, 15)]);
                 echo "\">
-                ";
+                    ";
             }
-            // line 16
-            echo "
-<!--  ";
             // line 17
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["record"], ($context["displayColumn"] ?? null), [], "any", false, false, false, 17), "html", null, true);
             echo "
- Identique avec --> 
-";
-            // line 19
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["record"], "name", [], "any", false, false, false, 19), "html", null, true);
+                    <!--  ";
+            // line 18
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["record"], ($context["displayColumn"] ?? null), [], "any", false, false, false, 18), "html", null, true);
+            echo "
+                        Identique avec --> 
+                    ";
+            // line 20
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["record"], "name", [], "any", false, false, false, 20), "html", null, true);
             echo "
 
 
-                ";
-            // line 22
+                    ";
+            // line 23
             if (($context["detailsPage"] ?? null)) {
-                // line 23
-                echo "                    </a>
-                ";
+                // line 24
+                echo "                        </a>
+                    ";
             }
-            // line 25
-            echo "            ";
-            echo trim(preg_replace('/>\s+</', '><', ob_get_clean()));
             // line 26
-            echo "        </li>
+            echo "                ";
+            echo trim(preg_replace('/>\s+</', '><', ob_get_clean()));
+            // line 27
+            echo "            </h3>
+        </li>
     ";
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 28
+            // line 30
             echo "        <li class=\"no-data\">";
             echo twig_escape_filter($this->env, ($context["noRecordsMessage"] ?? null), "html", null, true);
             echo "</li>
@@ -107,37 +109,37 @@ class __TwigTemplate_9ab5056b7b78ce942245966ce3df3aee26a465b685813124ef10f4de540
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['record'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 30
+        // line 32
         echo "</ul>
 
 ";
-        // line 32
-        if ((twig_get_attribute($this->env, $this->source, ($context["records"] ?? null), "lastPage", [], "any", false, false, false, 32) > 1)) {
-            // line 33
+        // line 34
+        if ((twig_get_attribute($this->env, $this->source, ($context["records"] ?? null), "lastPage", [], "any", false, false, false, 34) > 1)) {
+            // line 35
             echo "    <ul class=\"pagination\">
         ";
-            // line 34
-            if ((twig_get_attribute($this->env, $this->source, ($context["records"] ?? null), "currentPage", [], "any", false, false, false, 34) > 1)) {
-                // line 35
+            // line 36
+            if ((twig_get_attribute($this->env, $this->source, ($context["records"] ?? null), "currentPage", [], "any", false, false, false, 36) > 1)) {
+                // line 37
                 echo "            <li><a href=\"";
-                echo $this->extensions['Cms\Twig\Extension']->pageFilter(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 35), "baseFileName", [], "any", false, false, false, 35), [($context["pageParam"] ?? null) => (twig_get_attribute($this->env, $this->source, ($context["records"] ?? null), "currentPage", [], "any", false, false, false, 35) - 1)]);
+                echo $this->extensions['Cms\Twig\Extension']->pageFilter(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 37), "baseFileName", [], "any", false, false, false, 37), [($context["pageParam"] ?? null) => (twig_get_attribute($this->env, $this->source, ($context["records"] ?? null), "currentPage", [], "any", false, false, false, 37) - 1)]);
                 echo "\">&larr; Prev</a></li>
         ";
             }
-            // line 37
+            // line 39
             echo "
         ";
-            // line 38
+            // line 40
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(range(1, twig_get_attribute($this->env, $this->source, ($context["records"] ?? null), "lastPage", [], "any", false, false, false, 38)));
+            $context['_seq'] = twig_ensure_traversable(range(1, twig_get_attribute($this->env, $this->source, ($context["records"] ?? null), "lastPage", [], "any", false, false, false, 40)));
             foreach ($context['_seq'] as $context["_key"] => $context["page"]) {
-                // line 39
+                // line 41
                 echo "            <li class=\"";
-                echo (((twig_get_attribute($this->env, $this->source, ($context["records"] ?? null), "currentPage", [], "any", false, false, false, 39) == $context["page"])) ? ("active") : (null));
+                echo (((twig_get_attribute($this->env, $this->source, ($context["records"] ?? null), "currentPage", [], "any", false, false, false, 41) == $context["page"])) ? ("active") : (null));
                 echo "\">
                 <a href=\"";
-                // line 40
-                echo $this->extensions['Cms\Twig\Extension']->pageFilter(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 40), "baseFileName", [], "any", false, false, false, 40), [($context["pageParam"] ?? null) => $context["page"]]);
+                // line 42
+                echo $this->extensions['Cms\Twig\Extension']->pageFilter(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 42), "baseFileName", [], "any", false, false, false, 42), [($context["pageParam"] ?? null) => $context["page"]]);
                 echo "\">";
                 echo twig_escape_filter($this->env, $context["page"], "html", null, true);
                 echo "</a>
@@ -147,18 +149,18 @@ class __TwigTemplate_9ab5056b7b78ce942245966ce3df3aee26a465b685813124ef10f4de540
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['page'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 43
+            // line 45
             echo "
         ";
-            // line 44
-            if ((twig_get_attribute($this->env, $this->source, ($context["records"] ?? null), "lastPage", [], "any", false, false, false, 44) > twig_get_attribute($this->env, $this->source, ($context["records"] ?? null), "currentPage", [], "any", false, false, false, 44))) {
-                // line 45
+            // line 46
+            if ((twig_get_attribute($this->env, $this->source, ($context["records"] ?? null), "lastPage", [], "any", false, false, false, 46) > twig_get_attribute($this->env, $this->source, ($context["records"] ?? null), "currentPage", [], "any", false, false, false, 46))) {
+                // line 47
                 echo "            <li><a href=\"";
-                echo $this->extensions['Cms\Twig\Extension']->pageFilter(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 45), "baseFileName", [], "any", false, false, false, 45), [($context["pageParam"] ?? null) => (twig_get_attribute($this->env, $this->source, ($context["records"] ?? null), "currentPage", [], "any", false, false, false, 45) + 1)]);
+                echo $this->extensions['Cms\Twig\Extension']->pageFilter(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 47), "baseFileName", [], "any", false, false, false, 47), [($context["pageParam"] ?? null) => (twig_get_attribute($this->env, $this->source, ($context["records"] ?? null), "currentPage", [], "any", false, false, false, 47) + 1)]);
                 echo "\">Next &rarr;</a></li>
         ";
             }
-            // line 47
+            // line 49
             echo "    </ul>
 ";
         }
@@ -176,7 +178,7 @@ class __TwigTemplate_9ab5056b7b78ce942245966ce3df3aee26a465b685813124ef10f4de540
 
     public function getDebugInfo()
     {
-        return array (  162 => 47,  156 => 45,  154 => 44,  151 => 43,  140 => 40,  135 => 39,  131 => 38,  128 => 37,  122 => 35,  120 => 34,  117 => 33,  115 => 32,  111 => 30,  102 => 28,  96 => 26,  93 => 25,  89 => 23,  87 => 22,  81 => 19,  76 => 17,  73 => 16,  67 => 14,  64 => 13,  61 => 12,  58 => 10,  53 => 9,  49 => 7,  47 => 6,  45 => 5,  43 => 4,  41 => 3,  39 => 2,  37 => 1,);
+        return array (  164 => 49,  158 => 47,  156 => 46,  153 => 45,  142 => 42,  137 => 41,  133 => 40,  130 => 39,  124 => 37,  122 => 36,  119 => 35,  117 => 34,  113 => 32,  104 => 30,  97 => 27,  94 => 26,  90 => 24,  88 => 23,  82 => 20,  77 => 18,  74 => 17,  68 => 15,  65 => 14,  62 => 13,  58 => 10,  53 => 9,  49 => 7,  47 => 6,  45 => 5,  43 => 4,  41 => 3,  39 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -191,21 +193,23 @@ class __TwigTemplate_9ab5056b7b78ce942245966ce3df3aee26a465b685813124ef10f4de540
 <ul class=\"record-list\">
     {% for record in records %}
         <li>
-            {# Use spaceless tag to remove spaces inside the A tag. #}
-            {% spaceless %}
-                {% if detailsPage %}
-                    <a href=\"{{ detailsPage|page({ (detailsUrlParameter): attribute(record, detailsKeyColumn) }) }}\">
-                {% endif %}
+            <h3>
+                {# Use spaceless tag to remove spaces inside the A tag. #}
+                {% spaceless %}
+                    {% if detailsPage %}
+                        <a href=\"{{ detailsPage|page({ (detailsUrlParameter): attribute(record, detailsKeyColumn) }) }}\">
+                    {% endif %}
 
-<!--  {{ attribute(record, displayColumn) }}
- Identique avec --> 
-{{ record.name}}
+                    <!--  {{ attribute(record, displayColumn) }}
+                        Identique avec --> 
+                    {{ record.name}}
 
 
-                {% if detailsPage %}
-                    </a>
-                {% endif %}
-            {% endspaceless %}
+                    {% if detailsPage %}
+                        </a>
+                    {% endif %}
+                {% endspaceless %}
+            </h3>
         </li>
     {% else %}
         <li class=\"no-data\">{{ noRecordsMessage }}</li>

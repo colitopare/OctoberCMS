@@ -36,29 +36,36 @@ class __TwigTemplate_bf0bd1005897a22e8b47d6500dca35d5b061ac8a4e2828fea15ea7f07a1
         // line 1
         echo "<header class=\"main-header\">
 \t<div class=\"container clearfix\">
-\t\t<h1 class=\"logo\">Films avec October CMS</h1>
-\t\t<nav class=\"main-nav\">
-\t\t\t<ul>
-\t\t\t\t<li class=\"";
-        // line 6
-        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 6), "id", [], "any", false, false, false, 6) == "home")) {
+
+<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">
+  <a class=\"navbar-brand\" href=\"";
+        // line 5
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("home");
+        echo "\">Films avec October CMS</a>
+  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+    <span class=\"navbar-toggler-icon\"></span>
+  </button>
+  <div class=\"collapse navbar-collapse\" id=\"navbarNav\">
+    <ul class=\"navbar-nav\">
+      <li class=\"nav-item ";
+        // line 11
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 11), "id", [], "any", false, false, false, 11) == "home")) {
             echo " active ";
         }
         echo "\"><a href=\"";
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("home");
         echo "\">Accueil</a></li>
-\t\t\t\t<li class=\"";
-        // line 7
-        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 7), "id", [], "any", false, false, false, 7) == "films")) {
+      <li class=\"nav-item ";
+        // line 12
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 12), "id", [], "any", false, false, false, 12) == "films")) {
             echo " active ";
         }
         echo "\"><a href=\"";
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("films");
         echo "\">Films</a></li>
-
-\t\t\t</ul>
-\t\t</nav>
-
+    </ul>
+  </div>
+</nav>
 \t</div>
 </header>";
     }
@@ -75,22 +82,26 @@ class __TwigTemplate_bf0bd1005897a22e8b47d6500dca35d5b061ac8a4e2828fea15ea7f07a1
 
     public function getDebugInfo()
     {
-        return array (  52 => 7,  44 => 6,  37 => 1,);
+        return array (  60 => 12,  52 => 11,  43 => 5,  37 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("<header class=\"main-header\">
 \t<div class=\"container clearfix\">
-\t\t<h1 class=\"logo\">Films avec October CMS</h1>
-\t\t<nav class=\"main-nav\">
-\t\t\t<ul>
-\t\t\t\t<li class=\"{% if this.page.id == 'home' %} active {% endif %}\"><a href=\"{{'home'|page}}\">Accueil</a></li>
-\t\t\t\t<li class=\"{% if this.page.id == 'films' %} active {% endif %}\"><a href=\"{{'films'|page}}\">Films</a></li>
 
-\t\t\t</ul>
-\t\t</nav>
-
+<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">
+  <a class=\"navbar-brand\" href=\"{{'home'|page}}\">Films avec October CMS</a>
+  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+    <span class=\"navbar-toggler-icon\"></span>
+  </button>
+  <div class=\"collapse navbar-collapse\" id=\"navbarNav\">
+    <ul class=\"navbar-nav\">
+      <li class=\"nav-item {% if this.page.id == 'home' %} active {% endif %}\"><a href=\"{{'home'|page}}\">Accueil</a></li>
+      <li class=\"nav-item {% if this.page.id == 'films' %} active {% endif %}\"><a href=\"{{'films'|page}}\">Films</a></li>
+    </ul>
+  </div>
+</nav>
 \t</div>
 </header>", "/Users/Muriel/Sites/projetTestOctoberCMS/themes/olympos/partials/header.htm", "");
     }
