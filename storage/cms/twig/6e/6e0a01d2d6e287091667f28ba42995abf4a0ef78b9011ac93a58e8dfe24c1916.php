@@ -59,40 +59,64 @@ class __TwigTemplate_de1326a5bc04c176cbbf57658f11881e0aee654bdeb4c72f2648c055122
             // line 11
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "year", [], "any", false, false, false, 11), "html", null, true);
             echo "
+
+<h3>Genre</h3>
+";
+            // line 14
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "genres", [], "any", false, false, false, 14));
+            foreach ($context['_seq'] as $context["_key"] => $context["genre"]) {
+                // line 15
+                echo "<p>
+\t<a href=\"/projetTestOctoberCMS/genres/";
+                // line 16
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["genre"], "slug", [], "any", false, false, false, 16), "html", null, true);
+                echo "\">";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["genre"], "name_genre", [], "any", false, false, false, 16), "html", null, true);
+                echo "</a>
+</p>
+
+";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['genre'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 20
+            echo "
      <h3>Description</h3>
 
 
      <p>
       ";
-            // line 16
-            echo twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "description", [], "any", false, false, false, 16);
+            // line 25
+            echo twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "description", [], "any", false, false, false, 25);
             echo " 
       </p>
 <h3>Gallerie d'image</h3>
 <ul class=\"gallery clearfix\">
 \t<li>
 \t\t";
-            // line 21
+            // line 30
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "movie_gallery", [], "any", false, false, false, 21));
+            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "movie_gallery", [], "any", false, false, false, 30));
             foreach ($context['_seq'] as $context["_key"] => $context["image"]) {
-                // line 22
+                // line 31
                 echo "\t\t\t<img src=\"";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "thumb", [0 => 80, 1 => ($context["auto"] ?? null)], "method", false, false, false, 22), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "thumb", [0 => 80, 1 => ($context["auto"] ?? null)], "method", false, false, false, 31), "html", null, true);
                 echo "\"/><br>
 \t\t";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['image'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 24
+            // line 33
             echo "\t</li>
 </ul>
 
 
 ";
         } else {
-            // line 29
+            // line 38
             echo "    ";
             echo twig_escape_filter($this->env, ($context["notFoundMessage"] ?? null), "html", null, true);
             echo "
@@ -112,7 +136,7 @@ class __TwigTemplate_de1326a5bc04c176cbbf57658f11881e0aee654bdeb4c72f2648c055122
 
     public function getDebugInfo()
     {
-        return array (  96 => 29,  89 => 24,  80 => 22,  76 => 21,  68 => 16,  60 => 11,  56 => 10,  48 => 6,  46 => 5,  43 => 4,  41 => 3,  39 => 2,  37 => 1,);
+        return array (  120 => 38,  113 => 33,  104 => 31,  100 => 30,  92 => 25,  85 => 20,  73 => 16,  70 => 15,  66 => 14,  60 => 11,  56 => 10,  48 => 6,  46 => 5,  43 => 4,  41 => 3,  39 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -128,6 +152,15 @@ class __TwigTemplate_de1326a5bc04c176cbbf57658f11881e0aee654bdeb4c72f2648c055122
 
   <h2>  {{ record.name }}</h2>
      {{ record.year }}
+
+<h3>Genre</h3>
+{% for genre in record.genres %}
+<p>
+\t<a href=\"/projetTestOctoberCMS/genres/{{genre.slug}}\">{{genre.name_genre}}</a>
+</p>
+
+{% endfor %}
+
      <h3>Description</h3>
 
 

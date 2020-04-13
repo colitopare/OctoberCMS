@@ -7,7 +7,7 @@ use Model;
 /**
  * Model
  */
-class Movie extends Model
+class Genre extends Model
 {
     use \October\Rain\Database\Traits\Validation;
 
@@ -21,26 +21,18 @@ class Movie extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'webmaster_movies_';
+    public $table = 'webmaster_movies_genres';
 
     /**
      * @var array Validation rules
      */
     public $rules = [];
-
     /* Relations */
     public $belongsToMany = [
-        'genres' => [
-            'Webmaster\Movies\Models\Genre',
+        'movies' => [
+            'Webmaster\Movies\Models\Movie',
             'table' => 'webmaster_movies_movies_genres',
-            'order' => 'name_genre'
+            'order' => 'name'
         ]
-
-    ];
-    public $attachOne = [
-        'poster' => 'System\Models\File'
-    ];
-    public $attachMany = [
-        'movie_gallery' => 'System\Models\File'
     ];
 }

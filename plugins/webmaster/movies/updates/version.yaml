@@ -6,3 +6,18 @@
 1.0.3:
     - 'Updated table webmaster_movies_'
     - builder_table_update_webmaster_movies_.php
+1.0.4:
+    - 'Created table webmaster_movies_genres'
+    - builder_table_create_webmaster_movies_genres.php
+1.0.5:
+    - 'Updated table webmaster_movies_'
+    - builder_table_update_webmaster_movies__2.php
+1.0.6:
+    - 'Drop table webmaster_movies_genres'
+    - builder_table_delete_webmaster_movies_genres.php
+1.0.7:
+    - 'Created table webmaster_movies_genres'
+    - builder_table_create_webmaster_movies_genres_2.php
+1.0.8:
+    - 'Created table webmaster_movies_movies_genres'
+    - builder_table_create_webmaster_movies_movies_genres.php

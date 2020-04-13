@@ -1,4 +1,4 @@
-1586769541a:1:{s:15:"film-single.htm";a:10:{s:8:"fileName";s:15:"film-single.htm";s:7:"content";s:866:"title = "Film"
+1586787353a:1:{s:15:"film-single.htm";a:10:{s:8:"fileName";s:15:"film-single.htm";s:7:"content";s:1019:"title = "Film"
 url = "/films/film/:slug"
 layout = "default"
 is_hidden = 0
@@ -21,6 +21,15 @@ notFoundMessage = "Record not found"
 
   <h2>  {{ record.name }}</h2>
      {{ record.year }}
+
+<h3>Genre</h3>
+{% for genre in record.genres %}
+<p>
+	<a href="/projetTestOctoberCMS/genres/{{genre.slug}}">{{genre.name_genre}}</a>
+</p>
+
+{% endfor %}
+
      <h3>Description</h3>
 
 
@@ -39,7 +48,7 @@ notFoundMessage = "Record not found"
 
 {% else %}
     {{ notFoundMessage }}
-{% endif %}";s:5:"mtime";i:1586768937;s:6:"markup";s:610:"{% set record = builderDetails.record %}
+{% endif %}";s:5:"mtime";i:1586786746;s:6:"markup";s:763:"{% set record = builderDetails.record %}
 {% set displayColumn = builderDetails.displayColumn %}
 {% set notFoundMessage = builderDetails.notFoundMessage %}
 
@@ -50,6 +59,15 @@ notFoundMessage = "Record not found"
 
   <h2>  {{ record.name }}</h2>
      {{ record.year }}
+
+<h3>Genre</h3>
+{% for genre in record.genres %}
+<p>
+	<a href="/projetTestOctoberCMS/genres/{{genre.slug}}">{{genre.name_genre}}</a>
+</p>
+
+{% endfor %}
+
      <h3>Description</h3>
 
 

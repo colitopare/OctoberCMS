@@ -1,0 +1,10 @@
+name: Genres
+form: $/webmaster/movies/models/genre/fields.yaml
+modelClass: Webmaster\Movies\Models\Genre
+defaultRedirect: webmaster/movies/genres
+create:
+    redirect: 'webmaster/movies/genres/update/:id'
+    redirectClose: webmaster/movies/genres
+update:
+    redirect: webmaster/movies/genres
+    redirectClose: webmaster/movies/genres

@@ -82,4 +82,6 @@
   'webmaster\\movies\\Controllers\\movies' => 'plugins/webmaster/movies/controllers/movies.php',
   'Webmaster\\Movies\\Models\\Movie' => 'plugins/webmaster/movies/models/Movie.php',
   'RainLab\\Builder\\Classes\\ComponentHelper' => 'plugins/rainlab/builder/classes/ComponentHelper.php',
+  'webmaster\\movies\\Controllers\\genres' => 'plugins/webmaster/movies/controllers/genres.php',
+  'Webmaster\\Movies\\Models\\Genre' => 'plugins/webmaster/movies/models/Genre.php',
 );

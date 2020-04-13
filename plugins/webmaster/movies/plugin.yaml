@@ -9,3 +9,8 @@ navigation:
         label: Films
         url: webmaster/movies/movies
         icon: icon-video-camera
+        sideMenu:
+            side-menu-item:
+                label: Genres
+                url: webmaster/movies/genres
+                icon: icon-tags

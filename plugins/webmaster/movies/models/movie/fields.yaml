@@ -4,6 +4,17 @@ fields:
         span: full
         required: 1
         type: text
+    genres:
+        label: Genres
+        nameFrom: name_genre
+        descriptionFrom: description
+        span: auto
+        type: relation
+    year:
+        label: 'Année de sortie'
+        span: auto
+        required: 1
+        type: text
     description:
         label: Description
         size: ''
@@ -20,11 +31,6 @@ fields:
         imageWidth: '100'
         imageHeight: '100'
         type: fileupload
-    year:
-        label: 'Année de sortie'
-        span: auto
-        required: 1
-        type: text
     slug:
         label: Slug
         span: left

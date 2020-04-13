@@ -21,6 +21,15 @@ notFoundMessage = "Record not found"
 
   <h2>  {{ record.name }}</h2>
      {{ record.year }}
+
+<h3>Genre</h3>
+{% for genre in record.genres %}
+<p>
+	<a href="/projetTestOctoberCMS/genres/{{genre.slug}}">{{genre.name_genre}}</a>
+</p>
+
+{% endfor %}
+
      <h3>Description</h3>
 
 
