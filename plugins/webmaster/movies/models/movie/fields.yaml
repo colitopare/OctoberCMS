@@ -31,14 +31,6 @@ fields:
         imageWidth: '100'
         imageHeight: '100'
         type: fileupload
-    slug:
-        label: Slug
-        span: left
-        preset:
-            field: name
-            type: slug
-        hidden: 0
-        type: text
     movie_gallery:
         label: 'Gallerie d''image'
         span: auto
@@ -50,3 +42,26 @@ fields:
         imageWidth: '100'
         imageHeight: '100'
         type: fileupload
+    actors:
+        label: Acteurs
+        prompt: 'Add new item'
+        span: auto
+        type: repeater
+        form:
+            fields:
+                name_actor:
+                    label: Acteurs
+                    span: auto
+                    type: text
+                age_actor:
+                    label: Age
+                    span: auto
+                    type: text
+    slug:
+        label: Slug
+        span: right
+        preset:
+            field: name
+            type: slug
+        hidden: 0
+        type: text

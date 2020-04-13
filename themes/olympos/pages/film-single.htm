@@ -21,7 +21,12 @@ notFoundMessage = "Record not found"
 
   <h2>  {{ record.name }}</h2>
      {{ record.year }}
+     <h3>Acteurs</h3>
 
+     
+{% for actor in record.actors %}
+    <p>{{ actor.name_actor }}</p>
+{% endfor %}
 <h3>Genre</h3>
 {% for genre in record.genres %}
 <p>

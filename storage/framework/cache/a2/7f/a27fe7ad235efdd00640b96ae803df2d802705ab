@@ -1,4 +1,4 @@
-1586787353a:1:{s:15:"film-single.htm";a:10:{s:8:"fileName";s:15:"film-single.htm";s:7:"content";s:1019:"title = "Film"
+1586789404a:1:{s:15:"film-single.htm";a:10:{s:8:"fileName";s:15:"film-single.htm";s:7:"content";s:1127:"title = "Film"
 url = "/films/film/:slug"
 layout = "default"
 is_hidden = 0
@@ -21,7 +21,12 @@ notFoundMessage = "Record not found"
 
   <h2>  {{ record.name }}</h2>
      {{ record.year }}
+     <h3>Acteurs</h3>
 
+     
+{% for actor in record.actors %}
+    <p>{{ actor.name_actor }}</p>
+{% endfor %}
 <h3>Genre</h3>
 {% for genre in record.genres %}
 <p>
@@ -48,7 +53,7 @@ notFoundMessage = "Record not found"
 
 {% else %}
     {{ notFoundMessage }}
-{% endif %}";s:5:"mtime";i:1586786746;s:6:"markup";s:763:"{% set record = builderDetails.record %}
+{% endif %}";s:5:"mtime";i:1586788801;s:6:"markup";s:871:"{% set record = builderDetails.record %}
 {% set displayColumn = builderDetails.displayColumn %}
 {% set notFoundMessage = builderDetails.notFoundMessage %}
 
@@ -59,7 +64,12 @@ notFoundMessage = "Record not found"
 
   <h2>  {{ record.name }}</h2>
      {{ record.year }}
+     <h3>Acteurs</h3>
 
+     
+{% for actor in record.actors %}
+    <p>{{ actor.name_actor }}</p>
+{% endfor %}
 <h3>Genre</h3>
 {% for genre in record.genres %}
 <p>

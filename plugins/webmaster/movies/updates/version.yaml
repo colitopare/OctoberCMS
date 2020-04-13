@@ -21,3 +21,6 @@
 1.0.8:
     - 'Created table webmaster_movies_movies_genres'
     - builder_table_create_webmaster_movies_movies_genres.php
+1.0.9:
+    - 'Updated table webmaster_movies_'
+    - builder_table_update_webmaster_movies__3.php
