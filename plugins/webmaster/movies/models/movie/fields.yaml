@@ -9,6 +9,17 @@ fields:
         size: ''
         span: full
         type: richeditor
+    poster:
+        label: Poster
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        imageWidth: '100'
+        imageHeight: '100'
+        type: fileupload
     year:
         label: 'Année de sortie'
         span: auto
@@ -22,3 +33,14 @@ fields:
             type: slug
         hidden: 0
         type: text
+    movie_gallery:
+        label: 'Gallerie d''image'
+        span: auto
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        imageWidth: '100'
+        imageHeight: '100'
+        type: fileupload
