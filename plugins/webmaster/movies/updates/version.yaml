@@ -24,3 +24,12 @@
 1.0.9:
     - 'Updated table webmaster_movies_'
     - builder_table_update_webmaster_movies__3.php
+1.0.10:
+    - 'Created table webmaster_movies_actors'
+    - builder_table_create_webmaster_movies_actors.php
+1.0.11:
+    - 'Created table webmaster_movies_movies_actors'
+    - builder_table_create_webmaster_movies_movies_actors.php
+1.0.12:
+    - 'Updated table webmaster_movies_'
+    - builder_table_update_webmaster_movies__4.php

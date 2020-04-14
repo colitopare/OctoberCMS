@@ -1,0 +1,9 @@
+fields:
+    name:
+        label: Prénom
+        span: full
+        type: text
+    lastname:
+        label: Nom
+        span: full
+        type: text

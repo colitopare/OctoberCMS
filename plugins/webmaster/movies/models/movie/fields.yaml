@@ -42,15 +42,15 @@ fields:
         imageWidth: '100'
         imageHeight: '100'
         type: fileupload
+    actors:
+        label: Acteurs
+        span: auto
+        type: actorbox
     slug:
         label: Slug
-        span: right
+        span: left
+        hidden: 0
         preset:
             field: name
             type: slug
-        hidden: 0
         type: text
-    actors:
-      label: Acteurs
-      span: left
-      type: actorbox

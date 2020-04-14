@@ -14,3 +14,7 @@ navigation:
                 label: Genres
                 url: webmaster/movies/genres
                 icon: icon-tags
+            side-menu-item2:
+                label: Acteurs
+                url: webmaster/movies/actors
+                icon: icon-group

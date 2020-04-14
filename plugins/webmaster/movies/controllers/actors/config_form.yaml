@@ -1,0 +1,10 @@
+name: Actors
+form: $/webmaster/movies/models/actor/fields.yaml
+modelClass: Webmaster\Movies\Models\Actor
+defaultRedirect: webmaster/movies/actors
+create:
+    redirect: 'webmaster/movies/actors/update/:id'
+    redirectClose: webmaster/movies/actors
+update:
+    redirect: webmaster/movies/actors
+    redirectClose: webmaster/movies/actors

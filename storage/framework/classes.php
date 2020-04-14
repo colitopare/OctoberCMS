@@ -86,4 +86,6 @@
   'Webmaster\\Movies\\Models\\Genre' => 'plugins/webmaster/movies/models/Genre.php',
   'Webmaster\\Movies\\FormWidgets\\Actorbox' => 'plugins/webmaster/movies/formwidgets/Actorbox.php',
   'Webmaster\\Movies\\FormWidgets\\ActorBox' => 'plugins/webmaster/movies/formwidgets/ActorBox.php',
+  'webmaster\\movies\\Controllers\\actors' => 'plugins/webmaster/movies/controllers/actors.php',
+  'Webmaster\\Movies\\Models\\Actor' => 'plugins/webmaster/movies/models/Actor.php',
 );

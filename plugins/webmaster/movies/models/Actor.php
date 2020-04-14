@@ -7,7 +7,7 @@ use Model;
 /**
  * Model
  */
-class Movie extends Model
+class Actor extends Model
 {
     use \October\Rain\Database\Traits\Validation;
 
@@ -21,32 +21,27 @@ class Movie extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'webmaster_movies_';
+    public $table = 'webmaster_movies_actors';
 
     /**
      * @var array Validation rules
      */
     public $rules = [];
 
-    // protected $jsonable = ['actors'];
-
     /* Relations */
     public $belongsToMany = [
-        'genres' => [
-            'Webmaster\Movies\Models\Genre',
-            'table' => 'webmaster_movies_movies_genres',
-            'order' => 'name_genre'
-        ],
-        'actors' => [
-            'Webmaster\Movies\Models\Actor',
+        'movies' => [
+            'Webmaster\Movies\Models\Movie',
             'table' => 'webmaster_movies_movies_actors',
             'order' => 'name'
         ]
     ];
-    public $attachOne = [
-        'poster' => 'System\Models\File'
-    ];
-    public $attachMany = [
-        'movie_gallery' => 'System\Models\File'
-    ];
+
+    /**
+     * Création d'un accesseur pour permettre la concaténation de name et lastname
+     */
+    public function getFullNameAttribute()
+    {
+        return $this->name . " " . $this->lastname;
+    }
 }

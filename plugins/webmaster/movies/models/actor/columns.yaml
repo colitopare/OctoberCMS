@@ -1,0 +1,9 @@
+columns:
+    name:
+        label: Nom
+        type: text
+        searchable: true
+        sortable: true
+    lastname:
+        label: Prénom
+        type: text
