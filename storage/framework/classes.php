@@ -84,4 +84,6 @@
   'RainLab\\Builder\\Classes\\ComponentHelper' => 'plugins/rainlab/builder/classes/ComponentHelper.php',
   'webmaster\\movies\\Controllers\\genres' => 'plugins/webmaster/movies/controllers/genres.php',
   'Webmaster\\Movies\\Models\\Genre' => 'plugins/webmaster/movies/models/Genre.php',
+  'Webmaster\\Movies\\FormWidgets\\Actorbox' => 'plugins/webmaster/movies/formwidgets/Actorbox.php',
+  'Webmaster\\Movies\\FormWidgets\\ActorBox' => 'plugins/webmaster/movies/formwidgets/ActorBox.php',
 );

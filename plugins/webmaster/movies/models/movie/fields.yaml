@@ -42,21 +42,6 @@ fields:
         imageWidth: '100'
         imageHeight: '100'
         type: fileupload
-    actors:
-        label: Acteurs
-        prompt: 'Add new item'
-        span: auto
-        type: repeater
-        form:
-            fields:
-                name_actor:
-                    label: Acteurs
-                    span: auto
-                    type: text
-                age_actor:
-                    label: Age
-                    span: auto
-                    type: text
     slug:
         label: Slug
         span: right
@@ -65,3 +50,7 @@ fields:
             type: slug
         hidden: 0
         type: text
+    actors:
+      label: Acteurs
+      span: left
+      type: actorbox
