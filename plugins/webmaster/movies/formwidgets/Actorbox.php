@@ -40,20 +40,31 @@ class ActorBox extends FormWidgetBase
     }
   }
 
-  public function getSaveValue($category_products)
+  /**
+   * Vidéo 15
+   * Cette function sert à Sauvegarder une nouvelle entrée d'actor
+   * via le formulaire Movie avec Ajax
+   */
+  public function getSaveValue($actors)
   {
     $newArray = [];
 
-    foreach ($category_products as $category_productID) {
-      if (!is_numeric($category_productID)) {
-        $newCategoryProduct = new Actor;
-        $name = explode(' ', $category_productID);
-
-        $newCategoryProduct->name_category_product = $name[0];
-        $newCategoryProduct->save();
-        $newArray[] = $newCategoryProduct->id;
+    foreach ($actors as $actorID) {
+      if (!is_numeric($actorID)) {
+        /**
+         * si la valeur n'est pas numérique 
+         * c'est que c'est un acteur qui n'est pas en bdd
+         * du coup il faut créer un nouvel acteur
+         */
+        $newActor = new Actor;
+        // Comme dans Actor il y a plusieurs champs, je récupère les différentes valeurs
+        $nameLastname = explode(' ', $actorID);
+        $newActor->name = $nameLastname[0];
+        $newActor->lastname = $nameLastname[1];
+        $newActor->save();
+        $newArray[] = $newActor->id;
       } else {
-        $newArray[] = $category_productID;
+        $newArray[] = $actorID;
       }
     }
 
