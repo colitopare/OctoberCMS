@@ -4,16 +4,9 @@ layout = "default"
 is_hidden = 0
 
 [actors]
+results = 0
+sortOrder = "name desc"
 ==
 <h1> Hello World !!!!!!! </h1>
 
-{%  set actors=actors.actors  %}
-
-<ul>
-	{% for actor in actors %}
-		<li>{{ actor.name }}
-			{{ actor.lastname }}</li>
-
-	{% endfor %}
-
-</ul>
+{% component 'actors' %}

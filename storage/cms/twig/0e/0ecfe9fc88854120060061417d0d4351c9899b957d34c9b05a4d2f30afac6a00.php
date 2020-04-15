@@ -35,8 +35,9 @@ class __TwigTemplate_a8a283d7873de995845f15134f44a5e45b9b1a27c9843c427063b9ec73a
         $macros = $this->macros;
         // line 1
         echo "<h1> Hello World !!!!!!! </h1>
+
 ";
-        // line 2
+        // line 3
         $context['__cms_component_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("actors"        , $context['__cms_component_params']        );
         unset($context['__cms_component_params']);
@@ -54,12 +55,13 @@ class __TwigTemplate_a8a283d7873de995845f15134f44a5e45b9b1a27c9843c427063b9ec73a
 
     public function getDebugInfo()
     {
-        return array (  40 => 2,  37 => 1,);
+        return array (  41 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("<h1> Hello World !!!!!!! </h1>
+
 {% component 'actors' %}", "/Users/Muriel/Sites/projetTestOctoberCMS/themes/olympos/pages/home.htm", "");
     }
 }
