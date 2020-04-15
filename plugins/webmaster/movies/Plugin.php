@@ -8,6 +8,9 @@ class Plugin extends PluginBase
 {
     public function registerComponents()
     {
+        return [
+            'Webmaster\Movies\Components\Actors' => 'actors'
+        ];
     }
 
     public function registerSettings()
