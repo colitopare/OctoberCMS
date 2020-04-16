@@ -1,0 +1,6 @@
+plugin:
+    name: 'webmaster.contact::lang.plugin.name'
+    description: 'webmaster.contact::lang.plugin.description'
+    author: webmaster
+    icon: oc-icon-paper-plane
+    homepage: ''

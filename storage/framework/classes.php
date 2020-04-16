@@ -90,4 +90,6 @@
   'Webmaster\\Movies\\Models\\Actor' => 'plugins/webmaster/movies/models/Actor.php',
   'RainLab\\Blog\\Models\\Settings' => 'plugins/rainlab/blog/models/Settings.php',
   'Webmaster\\Movies\\Components\\Actors' => 'plugins/webmaster/movies/components/Actors.php',
+  'webmaster\\contact\\Plugin' => 'plugins/webmaster/contact/Plugin.php',
+  'Webmaster\\Contact\\Components\\ContactForm' => 'plugins/webmaster/contact/components/ContactForm.php',
 );

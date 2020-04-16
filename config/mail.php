@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'host' => 'smtp.mailgun.org',
+    'host' => 'smtp.gmail.com',
 
     /*
     |--------------------------------------------------------------------------
@@ -81,7 +81,7 @@ return [
     |
     */
 
-    'username' => null,
+    'username' => 'muriel.colit@gmail.com',
 
     /*
     |--------------------------------------------------------------------------
@@ -94,7 +94,7 @@ return [
     |
     */
 
-    'password' => null,
+    'password' => 'Mulaurel032509',
 
     /*
     |--------------------------------------------------------------------------
@@ -108,5 +108,10 @@ return [
     */
 
     'sendmail' => '/usr/sbin/sendmail -bs',
+    'to' => [
+        'adresse' => 'muriel.colit@gmail.com',
+        'name' => 'Envoyer tous les mails'
+    ],
+    'pretend' => false,
 
 ];
