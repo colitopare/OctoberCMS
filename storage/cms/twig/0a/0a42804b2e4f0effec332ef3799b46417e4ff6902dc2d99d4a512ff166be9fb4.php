@@ -37,30 +37,56 @@ class __TwigTemplate_ff239dbfc14bfe689b9d73025620c8ab43a6569a9cb454b1773390fa76a
         echo "<!-- data-request=\"onSend\" permet de lier ce formulaire à la function onSend() -->
 <form class=\"text-center border border-light p-5\" data-request=\"onSend\">
 
-    <h2 class=\"h4 mb-4\">Nous contacter</h2>
+\t<h2 class=\"h4 mb-4\">Nous contacter</h2>
 
-    <!-- Name -->
-    <input type=\"text\" id=\"name\" class=\"form-control mb-4\" placeholder=\"Nom\">
+\t<!-- Name -->
+\t<input type=\"text\" id=\"name\" name=\"name\" class=\"form-control mb-4\" placeholder=\"Nom\">
+\t";
+        // line 8
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["errors"] ?? null), "first", [0 => "name"], "method", false, false, false, 8), "html", null, true);
+        echo "
+\t<!-- Email -->
+\t<input type=\"email\" id=\"email\" name=\"email\" class=\"form-control mb-4\" placeholder=\"E-mail\">
+\t";
+        // line 11
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["errors"] ?? null), "first", [0 => "email"], "method", false, false, false, 11), "html", null, true);
+        echo "
 
-    <!-- Email -->
-    <input type=\"email\" id=\"email\" class=\"form-control mb-4\" placeholder=\"E-mail\">
+\t<!-- Subject -->
+\t<input
+\ttype=\"text\" id=\"subject\" name=\"subject\" class=\"form-control mb-4\" placeholder=\"Sujet\">
 
-    <!-- Subject -->
-    <input type=\"text\" id=\"subject\" class=\"form-control mb-4\" placeholder=\"Sujet\">
+\t<!-- Message -->
+\t<div class=\"form-group\">
+\t\t<textarea class=\"form-control rounded-0\" id=\"message\" name=\"content\" rows=\"3\" placeholder=\"Veuillez taper votre message ici\"></textarea>
+\t</div>
 
-    <!-- Message -->
-    <div class=\"form-group\">
-        <textarea class=\"form-control rounded-0\" id=\"message\" rows=\"3\" placeholder=\"Veuillez taper votre message ici\"></textarea>
-    </div>
+\t<!-- Copy 
+\t\t\t    <div class=\"custom-control custom-checkbox mb-4\">
+\t\t\t        <input type=\"checkbox\" class=\"custom-control-input\" id=\"contactFormCopy\">
+\t\t\t        <label class=\"custom-control-label\" for=\"contactFormCopy\">Envoyer moi une copy du message</label>
+\t\t\t    </div>
+\t\t\t-->
+\t<!-- Send button -->
+\t<button class=\"btn btn-info btn-block\" type=\"submit\">Envoyer</button>
 
-    <!-- Copy 
-    <div class=\"custom-control custom-checkbox mb-4\">
-        <input type=\"checkbox\" class=\"custom-control-input\" id=\"contactFormCopy\">
-        <label class=\"custom-control-label\" for=\"contactFormCopy\">Envoyer moi une copy du message</label>
-    </div>
--->
-    <!-- Send button -->
-    <button class=\"btn btn-info btn-block\" type=\"submit\">Envoyer</button>
+\t<ul>
+\t\t";
+        // line 32
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["errors"] ?? null), "all", [], "method", false, false, false, 32));
+        foreach ($context['_seq'] as $context["_key"] => $context["error"]) {
+            // line 33
+            echo "\t\t\t<li>";
+            echo twig_escape_filter($this->env, $context["error"], "html", null, true);
+            echo "</li>
+\t\t";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['error'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 35
+        echo "\t</ul>
 
 </form>
 ";
@@ -71,9 +97,14 @@ class __TwigTemplate_ff239dbfc14bfe689b9d73025620c8ab43a6569a9cb454b1773390fa76a
         return "/Users/Muriel/Sites/projetTestOctoberCMS/plugins/webmaster/contact/components/contactform/default.htm";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  37 => 1,);
+        return array (  89 => 35,  80 => 33,  76 => 32,  52 => 11,  46 => 8,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -81,30 +112,38 @@ class __TwigTemplate_ff239dbfc14bfe689b9d73025620c8ab43a6569a9cb454b1773390fa76a
         return new Source("<!-- data-request=\"onSend\" permet de lier ce formulaire à la function onSend() -->
 <form class=\"text-center border border-light p-5\" data-request=\"onSend\">
 
-    <h2 class=\"h4 mb-4\">Nous contacter</h2>
+\t<h2 class=\"h4 mb-4\">Nous contacter</h2>
 
-    <!-- Name -->
-    <input type=\"text\" id=\"name\" class=\"form-control mb-4\" placeholder=\"Nom\">
+\t<!-- Name -->
+\t<input type=\"text\" id=\"name\" name=\"name\" class=\"form-control mb-4\" placeholder=\"Nom\">
+\t{{errors.first('name')}}
+\t<!-- Email -->
+\t<input type=\"email\" id=\"email\" name=\"email\" class=\"form-control mb-4\" placeholder=\"E-mail\">
+\t{{errors.first('email')}}
 
-    <!-- Email -->
-    <input type=\"email\" id=\"email\" class=\"form-control mb-4\" placeholder=\"E-mail\">
+\t<!-- Subject -->
+\t<input
+\ttype=\"text\" id=\"subject\" name=\"subject\" class=\"form-control mb-4\" placeholder=\"Sujet\">
 
-    <!-- Subject -->
-    <input type=\"text\" id=\"subject\" class=\"form-control mb-4\" placeholder=\"Sujet\">
+\t<!-- Message -->
+\t<div class=\"form-group\">
+\t\t<textarea class=\"form-control rounded-0\" id=\"message\" name=\"content\" rows=\"3\" placeholder=\"Veuillez taper votre message ici\"></textarea>
+\t</div>
 
-    <!-- Message -->
-    <div class=\"form-group\">
-        <textarea class=\"form-control rounded-0\" id=\"message\" rows=\"3\" placeholder=\"Veuillez taper votre message ici\"></textarea>
-    </div>
+\t<!-- Copy 
+\t\t\t    <div class=\"custom-control custom-checkbox mb-4\">
+\t\t\t        <input type=\"checkbox\" class=\"custom-control-input\" id=\"contactFormCopy\">
+\t\t\t        <label class=\"custom-control-label\" for=\"contactFormCopy\">Envoyer moi une copy du message</label>
+\t\t\t    </div>
+\t\t\t-->
+\t<!-- Send button -->
+\t<button class=\"btn btn-info btn-block\" type=\"submit\">Envoyer</button>
 
-    <!-- Copy 
-    <div class=\"custom-control custom-checkbox mb-4\">
-        <input type=\"checkbox\" class=\"custom-control-input\" id=\"contactFormCopy\">
-        <label class=\"custom-control-label\" for=\"contactFormCopy\">Envoyer moi une copy du message</label>
-    </div>
--->
-    <!-- Send button -->
-    <button class=\"btn btn-info btn-block\" type=\"submit\">Envoyer</button>
+\t<ul>
+\t\t{% for error in errors.all() %}
+\t\t\t<li>{{ error }}</li>
+\t\t{% endfor %}
+\t</ul>
 
 </form>
 ", "/Users/Muriel/Sites/projetTestOctoberCMS/plugins/webmaster/contact/components/contactform/default.htm", "");

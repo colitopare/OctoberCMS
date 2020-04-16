@@ -9,7 +9,8 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            'Webmaster\Movies\Components\Actors' => 'actors'
+            'Webmaster\Movies\Components\Actors' => 'actors',
+            'Webmaster\Movies\Components\ActorForm' => 'actorform'
         ];
     }
 

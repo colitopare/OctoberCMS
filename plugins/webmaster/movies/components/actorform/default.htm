@@ -1,0 +1,15 @@
+<!-- data-request="onSave" permet de lier ce formulaire à la function onSave() -->
+<form class="text-center border border-light p-5" data-request="onSave">
+
+	<h2 class="h4 mb-4">Ajouter un acteur</h2>
+
+	<input type="text" id="name" name="name" class="form-control mb-4" placeholder="Prénom de l'acteur">
+	<input type="text" id="lastname" name="lastname" class="form-control mb-4" placeholder="Nom de l'acteur">
+
+	<button class="btn btn-info btn-block" type="submit">Enregistrer</button>
+
+	{% flash success %}
+		<p>{{ message }}</p>
+	{% endflash %}
+
+</form>

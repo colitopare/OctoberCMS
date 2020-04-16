@@ -5,6 +5,8 @@ namespace Webmaster\Contact\Components;
 use Cms\Classes\ComponentBase;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Validator;
 
 class ContactForm extends ComponentBase
 {
@@ -31,13 +33,34 @@ class ContactForm extends ComponentBase
    */
   public function onSend()
   {
-    $vars = ['name' => Input::get('email'), 'email' => Input::get('email'), 'content' => Input::get('content')];
+    // ici je fait la validation de mes champs 
+    $validator = Validator::make(
+      [
+        'name' => Input::get('name'),
+        'email' => Input::get('email')
+      ],
+      [
+        'name' => 'required|min:5',
+        'email' => 'required|email'
+      ]
+    );
 
-    // le premier paramètre dit à October quelle vue de courrier utilisée
-    Mail::send('webmaster.contact::mail.message', $vars, function ($message) {
+    if ($validator->fails()) {
 
-      $message->to('muriel.colit@gmail.com', 'Admin Person');
-      $message->subject(Input::get('subject'));
-    });
+      // si la validation ne passe pas 
+      // je vais afficher des messages à l'utilisateur du formulaire
+      // Pour cela on redirige avec les erreurs du validator
+      return Redirect::back()->withErrors($validator);
+    } else {
+
+      $vars = ['name' => Input::get('name'), 'email' => Input::get('email'), 'content' => Input::get('content')];
+
+      // le premier paramètre dit à October quelle vue de courrier utilisée
+      Mail::send('webmaster.contact::mail.message', $vars, function ($message) {
+
+        $message->to('muriel.colit@gmail.com', 'Admin Person');
+        $message->subject(Input::get('subject'));
+      });
+    }
   }
 }

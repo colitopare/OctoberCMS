@@ -1,29 +1,37 @@
 <!-- data-request="onSend" permet de lier ce formulaire à la function onSend() -->
 <form class="text-center border border-light p-5" data-request="onSend">
 
-    <h2 class="h4 mb-4">Nous contacter</h2>
+	<h2 class="h4 mb-4">Nous contacter</h2>
 
-    <!-- Name -->
-    <input type="text" id="name" class="form-control mb-4" placeholder="Nom">
+	<!-- Name -->
+	<input type="text" id="name" name="name" class="form-control mb-4" placeholder="Nom">
+	{{errors.first('name')}}
+	<!-- Email -->
+	<input type="email" id="email" name="email" class="form-control mb-4" placeholder="E-mail">
+	{{errors.first('email')}}
 
-    <!-- Email -->
-    <input type="email" id="email" class="form-control mb-4" placeholder="E-mail">
+	<!-- Subject -->
+	<input
+	type="text" id="subject" name="subject" class="form-control mb-4" placeholder="Sujet">
 
-    <!-- Subject -->
-    <input type="text" id="subject" class="form-control mb-4" placeholder="Sujet">
+	<!-- Message -->
+	<div class="form-group">
+		<textarea class="form-control rounded-0" id="message" name="content" rows="3" placeholder="Veuillez taper votre message ici"></textarea>
+	</div>
 
-    <!-- Message -->
-    <div class="form-group">
-        <textarea class="form-control rounded-0" id="message" rows="3" placeholder="Veuillez taper votre message ici"></textarea>
-    </div>
+	<!-- Copy 
+			    <div class="custom-control custom-checkbox mb-4">
+			        <input type="checkbox" class="custom-control-input" id="contactFormCopy">
+			        <label class="custom-control-label" for="contactFormCopy">Envoyer moi une copy du message</label>
+			    </div>
+			-->
+	<!-- Send button -->
+	<button class="btn btn-info btn-block" type="submit">Envoyer</button>
 
-    <!-- Copy 
-    <div class="custom-control custom-checkbox mb-4">
-        <input type="checkbox" class="custom-control-input" id="contactFormCopy">
-        <label class="custom-control-label" for="contactFormCopy">Envoyer moi une copy du message</label>
-    </div>
--->
-    <!-- Send button -->
-    <button class="btn btn-info btn-block" type="submit">Envoyer</button>
+	<ul>
+		{% for error in errors.all() %}
+			<li>{{ error }}</li>
+		{% endfor %}
+	</ul>
 
 </form>
