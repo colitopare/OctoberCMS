@@ -105,4 +105,8 @@
   'RainLab\\User\\Facades\\Auth' => 'plugins/rainlab/user/facades/Auth.php',
   'RainLab\\User\\Classes\\AuthManager' => 'plugins/rainlab/user/classes/AuthManager.php',
   'RainLab\\User\\Models\\Throttle' => 'plugins/rainlab/user/models/Throttle.php',
+  'backend\\Controllers\\preferences' => 'modules/backend/controllers/preferences.php',
+  'webmaster\\profile\\Plugin' => 'plugins/webmaster/profile/Plugin.php',
+  'RainLab\\User\\Models\\MailBlocker' => 'plugins/rainlab/user/models/MailBlocker.php',
+  'RainLab\\User\\Controllers\\Users' => 'plugins/rainlab/user/controllers/Users.php',
 );

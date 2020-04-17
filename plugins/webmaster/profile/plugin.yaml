@@ -1,0 +1,6 @@
+plugin:
+    name: 'webmaster.profile::lang.plugin.name'
+    description: 'webmaster.profile::lang.plugin.description'
+    author: webmaster
+    icon: oc-icon-user-secret
+    homepage: ''
