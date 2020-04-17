@@ -4,6 +4,7 @@ namespace Webmaster\Profile;
 
 use System\Classes\PluginBase;
 use RainLab\User\Controllers\Users as UsersController;
+use RainLab\User\Models\User as UserModels;
 
 class Plugin extends PluginBase
 {
@@ -22,6 +23,18 @@ class Plugin extends PluginBase
      */
     public function boot()
     {
+        // Pour permettre que les 2 champs ajouter 
+        // puissent être modifiable côté frontend
+        // Je vais étendre le modèle
+        UserModels::extend(function ($model) {
+            $model->addFillable([
+                'facebook',
+                'bio'
+            ]);
+        });
+
+
+
         // ça va utiliser le modèle de ce controller pour le formulaire, 
         // le modèle et les variables de context
         // maintenant on va ajouter les 2 champs supplémentaires
