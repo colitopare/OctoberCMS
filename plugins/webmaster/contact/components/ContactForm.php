@@ -5,8 +5,8 @@ namespace Webmaster\Contact\Components;
 use Cms\Classes\ComponentBase;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Input;
-use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
+use October\Rain\Exception\ValidationException;
 
 class ContactForm extends ComponentBase
 {
@@ -33,33 +33,20 @@ class ContactForm extends ComponentBase
    */
   public function onSend()
   {
-    // ici je fait la validation de mes champs 
-    $validator = Validator::make(
-      [
-        'name' => Input::get('name'),
-        'email' => Input::get('email')
-      ],
-      [
-        'name' => 'required|min:5',
-        'email' => 'required|email'
-      ]
-    );
+    // je récup en post les data saisie
+    $data = post();
+
+    // ici j'écris les règles de validation de mes champs 
+    $rules = [
+      'name' => 'required|min:5',
+      'email' => 'required|email'
+    ];
+
+    // ici je passe au validateur les data et les règles de validation
+    $validator = Validator::make($data, $rules);
 
     if ($validator->fails()) {
-      /** Validation du formulaire en ajax */
-      // Affichage dans l'élément qui a l'id result
-      return ['#result' => $this->renderPartial('contactform::messages', [
-        'errorMsgs' => $validator->messages()->all(),
-        'fieldMsgs' => $validator->messages(),
-      ])];
-
-      /** Validation du formulaire sans Ajax avec une simple redirection */
-      // si la validation ne passe pas 
-      // je vais afficher des messages à l'utilisateur du formulaire
-      // Pour cela on redirige avec les erreurs du validator
-      //  return Redirect::back()->withErrors($validator);
-
-
+      throw new ValidationException($validator);
     } else {
 
       $vars = ['name' => Input::get('name'), 'email' => Input::get('email'), 'content' => Input::get('content')];
