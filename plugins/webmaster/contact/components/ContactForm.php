@@ -46,11 +46,20 @@ class ContactForm extends ComponentBase
     );
 
     if ($validator->fails()) {
+      /** Validation du formulaire en ajax */
+      // Affichage dans l'élément qui a l'id result
+      return ['#result' => $this->renderPartial('contactform::messages', [
+        'errorMsgs' => $validator->messages()->all(),
+        'fieldMsgs' => $validator->messages(),
+      ])];
 
+      /** Validation du formulaire sans Ajax avec une simple redirection */
       // si la validation ne passe pas 
       // je vais afficher des messages à l'utilisateur du formulaire
       // Pour cela on redirige avec les erreurs du validator
-      return Redirect::back()->withErrors($validator);
+      //  return Redirect::back()->withErrors($validator);
+
+
     } else {
 
       $vars = ['name' => Input::get('name'), 'email' => Input::get('email'), 'content' => Input::get('content')];

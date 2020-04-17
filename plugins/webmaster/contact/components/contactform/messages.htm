@@ -1,0 +1,14 @@
+{% for message in errorMsgs %}
+	<div>{{ message }}</div>
+{% endfor %}
+
+<script type="text/javascript">
+// il faut supprimer les anciens messages 
+  $('.error-msg').remove();
+	var errors = {{ fieldMsgs|json_encode()|raw }};
+// console.log(errors);
+{/* Va permettre d'afficher les erreurs au niveau des inputs */}
+  $.each(errors, (name, msg) => {
+    $('<div class="error-msg">' + msg + '</div>').insertAfter($('input[name=' + name + ']'))
+  }); 
+</script>
