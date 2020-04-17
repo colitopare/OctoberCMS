@@ -63,7 +63,44 @@ class __TwigTemplate_bf0bd1005897a22e8b47d6500dca35d5b061ac8a4e2828fea15ea7f07a1
         echo "\"><a href=\"";
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("films");
         echo "\">Films</a></li>
-    </ul>
+      <li class=\"nav-item ";
+        // line 13
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 13), "id", [], "any", false, false, false, 13) == "addactors")) {
+            echo " active ";
+        }
+        echo "\"><a href=\"";
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("addactors");
+        echo "\">Ajouter un acteur</a></li>
+      <li class=\"nav-item ";
+        // line 14
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 14), "id", [], "any", false, false, false, 14) == "login")) {
+            echo " active ";
+        }
+        echo "\"><a href=\"";
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("login");
+        echo "\">
+      ";
+        // line 15
+        if ( !($context["user"] ?? null)) {
+            // line 16
+            echo "        Connexion
+      ";
+        } else {
+            // line 18
+            echo "        Profil
+      ";
+        }
+        // line 20
+        echo "      </a></li>
+      ";
+        // line 21
+        if (($context["user"] ?? null)) {
+            // line 22
+            echo "         <li><a data-request=\"onLogout\" data-request-data=\"redirect: '/'\">Déconnexion</a></li>  
+      ";
+        }
+        // line 24
+        echo "    </ul>
   </div>
 </nav>
 \t</div>
@@ -82,7 +119,7 @@ class __TwigTemplate_bf0bd1005897a22e8b47d6500dca35d5b061ac8a4e2828fea15ea7f07a1
 
     public function getDebugInfo()
     {
-        return array (  60 => 12,  52 => 11,  43 => 5,  37 => 1,);
+        return array (  103 => 24,  99 => 22,  97 => 21,  94 => 20,  90 => 18,  86 => 16,  84 => 15,  76 => 14,  68 => 13,  60 => 12,  52 => 11,  43 => 5,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -99,6 +136,17 @@ class __TwigTemplate_bf0bd1005897a22e8b47d6500dca35d5b061ac8a4e2828fea15ea7f07a1
     <ul class=\"navbar-nav\">
       <li class=\"nav-item {% if this.page.id == 'home' %} active {% endif %}\"><a href=\"{{'home'|page}}\">Accueil</a></li>
       <li class=\"nav-item {% if this.page.id == 'films' %} active {% endif %}\"><a href=\"{{'films'|page}}\">Films</a></li>
+      <li class=\"nav-item {% if this.page.id == 'addactors' %} active {% endif %}\"><a href=\"{{'addactors'|page}}\">Ajouter un acteur</a></li>
+      <li class=\"nav-item {% if this.page.id == 'login' %} active {% endif %}\"><a href=\"{{'login'|page}}\">
+      {% if not user %}
+        Connexion
+      {% else %}
+        Profil
+      {% endif %}
+      </a></li>
+      {% if user %}
+         <li><a data-request=\"onLogout\" data-request-data=\"redirect: '/'\">Déconnexion</a></li>  
+      {% endif %}
     </ul>
   </div>
 </nav>
