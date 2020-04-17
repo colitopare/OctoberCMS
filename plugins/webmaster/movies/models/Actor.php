@@ -37,6 +37,11 @@ class Actor extends Model
         ]
     ];
 
+    // pour Ajouter une image aux acteurs
+    public $attachOne = [
+        'actorimage' => 'System\Models\File'
+    ];
+
     /**
      * Création d'un accesseur pour permettre la concaténation de name et lastname
      */

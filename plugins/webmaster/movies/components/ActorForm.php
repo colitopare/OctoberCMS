@@ -5,7 +5,6 @@ namespace Webmaster\movies\Components;
 use Cms\Classes\ComponentBase;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
-use Illuminate\Support\Facades\Validator;
 use October\Rain\Support\Facades\Flash;
 use Webmaster\Movies\Models\Actor;
 
@@ -27,6 +26,7 @@ class ActorForm extends ComponentBase
     $actor = new Actor;
     $actor->name = Input::get('name');
     $actor->lastname = Input::get('lastname');
+    $actor->actorimage = Input::file('actorimage');
     $actor->save();
 
     Flash::success("L'acteur a bien été ajouter");

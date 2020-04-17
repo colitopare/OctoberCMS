@@ -1,10 +1,24 @@
 <!-- data-request="onSave" permet de lier ce formulaire à la function onSave() -->
-<form class="text-center border border-light p-5" data-request="onSave">
 
+<!-- Structure de la balie form pour un formulaire en AJAX -->
+<!--  <form class="text-center border border-light p-5" data-request="onSave"> -->
+
+<!-- Structure de la balie form pour un formulaire simple -->
+<form class="text-center border border-light p-5" method="POST" action="{{ url('addactors') }}" accept-charset="UTF8" enctype="multipart/form-data"> 
 	<h2 class="h4 mb-4">Ajouter un acteur</h2>
+
+	<input type="hidden" name="_handler" value="onSave">
+	<!-- Jeton de Formulaire, spécifique à October -->
+	{{ form_token() }}
+	<!-- Clé de session de Formulaire, spécifique à October -->
+	{{ form_sessionkey() }}
+
 
 	<input type="text" id="name" name="name" class="form-control mb-4" placeholder="Prénom de l'acteur">
 	<input type="text" id="lastname" name="lastname" class="form-control mb-4" placeholder="Nom de l'acteur">
+
+	<label>Photo de l acteur</label>
+	<input type="file" name="actorimage">
 
 	<button class="btn btn-info btn-block" type="submit">Enregistrer</button>
 

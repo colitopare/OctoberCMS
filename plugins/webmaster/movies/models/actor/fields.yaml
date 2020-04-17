@@ -7,3 +7,14 @@ fields:
         label: Nom
         span: full
         type: text
+    actorimage:
+        label: 'Photo de l''acteur'
+        span: auto
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        imageWidth: '100'
+        imageHeight: '100'
+        type: fileupload
