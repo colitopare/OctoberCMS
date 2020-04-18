@@ -34,65 +34,56 @@ class __TwigTemplate_de1326a5bc04c176cbbf57658f11881e0aee654bdeb4c72f2648c055122
     {
         $macros = $this->macros;
         // line 1
-        $context["record"] = twig_get_attribute($this->env, $this->source, ($context["builderDetails"] ?? null), "record", [], "any", false, false, false, 1);
-        // line 2
-        $context["displayColumn"] = twig_get_attribute($this->env, $this->source, ($context["builderDetails"] ?? null), "displayColumn", [], "any", false, false, false, 2);
-        // line 3
-        $context["notFoundMessage"] = twig_get_attribute($this->env, $this->source, ($context["builderDetails"] ?? null), "notFoundMessage", [], "any", false, false, false, 3);
-        // line 4
-        echo "
-";
-        // line 5
-        if (($context["record"] ?? null)) {
-            // line 6
+        if (($context["movie"] ?? null)) {
+            // line 2
             echo "<img src=\"";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "poster", [], "any", false, false, false, 6), "thumb", [0 => 200, 1 => ($context["auto"] ?? null)], "method", false, false, false, 6), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["movie"] ?? null), "poster", [], "any", false, false, false, 2), "thumb", [0 => 200, 1 => ($context["auto"] ?? null)], "method", false, false, false, 2), "html", null, true);
             echo "\" alt=\"Poster film\">
 
 
 
-  <h2>  ";
-            // line 10
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "name", [], "any", false, false, false, 10), "html", null, true);
+<h2> ";
+            // line 6
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["movie"] ?? null), "name", [], "any", false, false, false, 6), "html", null, true);
             echo "</h2>
-     ";
-            // line 11
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "year", [], "any", false, false, false, 11), "html", null, true);
+";
+            // line 7
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["movie"] ?? null), "year", [], "any", false, false, false, 7), "html", null, true);
             echo "
 
 
-     <h3>Acteurs</h3>     
-        ";
-            // line 15
+<h3>Acteurs</h3>
+";
+            // line 11
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "actors", [], "any", false, false, false, 15));
+            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["movie"] ?? null), "actors", [], "any", false, false, false, 11));
             foreach ($context['_seq'] as $context["_key"] => $context["actor"]) {
-                // line 16
-                echo "            <p>";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["actor"], "name_actor", [], "any", false, false, false, 16), "html", null, true);
+                // line 12
+                echo "<p>";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["actor"], "name_actor", [], "any", false, false, false, 12), "html", null, true);
                 echo "</p>
-        ";
+";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['actor'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 18
+            // line 14
             echo "
 
 
 <h3>Genre</h3>
 ";
-            // line 22
+            // line 18
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "genres", [], "any", false, false, false, 22));
+            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["movie"] ?? null), "genres", [], "any", false, false, false, 18));
             foreach ($context['_seq'] as $context["_key"] => $context["genre"]) {
-                // line 23
+                // line 19
                 echo "<p>
-\t<a href=\"/projetTestOctoberCMS/genres/";
-                // line 24
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["genre"], "slug", [], "any", false, false, false, 24), "html", null, true);
+    <a href=\"/projetTestOctoberCMS/genres/";
+                // line 20
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["genre"], "slug", [], "any", false, false, false, 20), "html", null, true);
                 echo "\">";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["genre"], "name_genre", [], "any", false, false, false, 24), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["genre"], "name_genre", [], "any", false, false, false, 20), "html", null, true);
                 echo "</a>
 </p>
 
@@ -101,43 +92,42 @@ class __TwigTemplate_de1326a5bc04c176cbbf57658f11881e0aee654bdeb4c72f2648c055122
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['genre'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 28
+            // line 24
             echo "
-     <h3>Description</h3>
+<h3>Description</h3>
 
 
-     <p>
-      ";
-            // line 33
-            echo twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "description", [], "any", false, false, false, 33);
-            echo " 
-      </p>
+<p>
+    ";
+            // line 29
+            echo twig_get_attribute($this->env, $this->source, ($context["movie"] ?? null), "description", [], "any", false, false, false, 29);
+            echo "
+</p>
 <h3>Gallerie d'image</h3>
 <ul class=\"gallery clearfix\">
-\t<li>
-\t\t";
-            // line 38
+    <li>
+        ";
+            // line 34
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "movie_gallery", [], "any", false, false, false, 38));
+            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["movie"] ?? null), "movie_gallery", [], "any", false, false, false, 34));
             foreach ($context['_seq'] as $context["_key"] => $context["image"]) {
-                // line 39
-                echo "\t\t\t<img src=\"";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "thumb", [0 => 80, 1 => ($context["auto"] ?? null)], "method", false, false, false, 39), "html", null, true);
-                echo "\"/><br>
-\t\t";
+                // line 35
+                echo "        <img src=\"";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "thumb", [0 => 80, 1 => ($context["auto"] ?? null)], "method", false, false, false, 35), "html", null, true);
+                echo "\" /><br>
+        ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['image'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 41
-            echo "\t</li>
+            // line 37
+            echo "    </li>
 </ul>
 
 
 ";
         } else {
-            // line 46
-            echo "    ";
+            // line 42
             echo twig_escape_filter($this->env, ($context["notFoundMessage"] ?? null), "html", null, true);
             echo "
 ";
@@ -156,57 +146,53 @@ class __TwigTemplate_de1326a5bc04c176cbbf57658f11881e0aee654bdeb4c72f2648c055122
 
     public function getDebugInfo()
     {
-        return array (  140 => 46,  133 => 41,  124 => 39,  120 => 38,  112 => 33,  105 => 28,  93 => 24,  90 => 23,  86 => 22,  80 => 18,  71 => 16,  67 => 15,  60 => 11,  56 => 10,  48 => 6,  46 => 5,  43 => 4,  41 => 3,  39 => 2,  37 => 1,);
+        return array (  131 => 42,  124 => 37,  115 => 35,  111 => 34,  103 => 29,  96 => 24,  84 => 20,  81 => 19,  77 => 18,  71 => 14,  62 => 12,  58 => 11,  51 => 7,  47 => 6,  39 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("{% set record = builderDetails.record %}
-{% set displayColumn = builderDetails.displayColumn %}
-{% set notFoundMessage = builderDetails.notFoundMessage %}
-
-{% if record %}
-<img src=\"{{ record.poster.thumb(200, auto) }}\" alt=\"Poster film\">
+        return new Source("{% if movie %}
+<img src=\"{{ movie.poster.thumb(200, auto) }}\" alt=\"Poster film\">
 
 
 
-  <h2>  {{ record.name }}</h2>
-     {{ record.year }}
+<h2> {{ movie.name }}</h2>
+{{ movie.year }}
 
 
-     <h3>Acteurs</h3>     
-        {% for actor in record.actors %}
-            <p>{{ actor.name_actor }}</p>
-        {% endfor %}
+<h3>Acteurs</h3>
+{% for actor in movie.actors %}
+<p>{{ actor.name_actor }}</p>
+{% endfor %}
 
 
 
 <h3>Genre</h3>
-{% for genre in record.genres %}
+{% for genre in movie.genres %}
 <p>
-\t<a href=\"/projetTestOctoberCMS/genres/{{genre.slug}}\">{{genre.name_genre}}</a>
+    <a href=\"/projetTestOctoberCMS/genres/{{genre.slug}}\">{{genre.name_genre}}</a>
 </p>
 
 {% endfor %}
 
-     <h3>Description</h3>
+<h3>Description</h3>
 
 
-     <p>
-      {{ record.description|raw }} 
-      </p>
+<p>
+    {{ movie.description|raw }}
+</p>
 <h3>Gallerie d'image</h3>
 <ul class=\"gallery clearfix\">
-\t<li>
-\t\t{% for image in record.movie_gallery %}
-\t\t\t<img src=\"{{ image.thumb(80, auto) }}\"/><br>
-\t\t{% endfor %}
-\t</li>
+    <li>
+        {% for image in movie.movie_gallery %}
+        <img src=\"{{ image.thumb(80, auto) }}\" /><br>
+        {% endfor %}
+    </li>
 </ul>
 
 
 {% else %}
-    {{ notFoundMessage }}
+{{ notFoundMessage }}
 {% endif %}", "/Users/Muriel/Sites/projetTestOctoberCMS/themes/olympos/pages/film-single.htm", "");
     }
 }

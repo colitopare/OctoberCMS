@@ -3,57 +3,59 @@ url = "/films/film/:slug"
 layout = "default"
 is_hidden = 0
 
-[builderDetails]
-modelClass = "Webmaster\Movies\Models\Movie"
-identifierValue = "{{ :slug }}"
-modelKeyColumn = "slug"
-displayColumn = "name"
-notFoundMessage = "Record not found"
 ==
-{% set record = builderDetails.record %}
-{% set displayColumn = builderDetails.displayColumn %}
-{% set notFoundMessage = builderDetails.notFoundMessage %}
+<?
 
-{% if record %}
-<img src="{{ record.poster.thumb(200, auto) }}" alt="Poster film">
+use Webmaster\Movies\Models\Movie;
+
+function onStart()
+{
+    $this['movie'] = Movie::where('slug', '=', $this->param('slug'))->first();
+}
+?>
+==
+
+
+{% if movie %}
+<img src="{{ movie.poster.thumb(200, auto) }}" alt="Poster film">
 
 
 
-  <h2>  {{ record.name }}</h2>
-     {{ record.year }}
+<h2> {{ movie.name }}</h2>
+{{ movie.year }}
 
 
-     <h3>Acteurs</h3>     
-        {% for actor in record.actors %}
-            <p>{{ actor.name_actor }}</p>
-        {% endfor %}
+<h3>Acteurs</h3>
+{% for actor in movie.actors %}
+<p>{{ actor.name_actor }}</p>
+{% endfor %}
 
 
 
 <h3>Genre</h3>
-{% for genre in record.genres %}
+{% for genre in movie.genres %}
 <p>
-	<a href="/projetTestOctoberCMS/genres/{{genre.slug}}">{{genre.name_genre}}</a>
+    <a href="/projetTestOctoberCMS/genres/{{genre.slug}}">{{genre.name_genre}}</a>
 </p>
 
 {% endfor %}
 
-     <h3>Description</h3>
+<h3>Description</h3>
 
 
-     <p>
-      {{ record.description|raw }} 
-      </p>
+<p>
+    {{ movie.description|raw }}
+</p>
 <h3>Gallerie d'image</h3>
 <ul class="gallery clearfix">
-	<li>
-		{% for image in record.movie_gallery %}
-			<img src="{{ image.thumb(80, auto) }}"/><br>
-		{% endfor %}
-	</li>
+    <li>
+        {% for image in movie.movie_gallery %}
+        <img src="{{ image.thumb(80, auto) }}" /><br>
+        {% endfor %}
+    </li>
 </ul>
 
 
 {% else %}
-    {{ notFoundMessage }}
+{{ notFoundMessage }}
 {% endif %}
